@@ -9,7 +9,8 @@ class ConcertController extends Controller
 {
     public function index()
     {
-        return view('concerts.index');
+        $concerts = Concert::all(); // Atau gunakan pagination
+        return view('concerts.index', compact('concerts'));
     }
 
     public function create()

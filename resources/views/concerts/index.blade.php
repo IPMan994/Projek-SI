@@ -1,47 +1,87 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="p-6">
-    <!-- Filter -->
-    <div class="bg-white shadow rounded-xl p-6 mb-8">
-        <h2 class="text-xl font-semibold mb-4">Cari Event</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <select class="w-full p-3 border rounded-lg">
-                <option>Konser Jazz</option>
-                <option>Konser Pop</option>
-                <option>Konser Rock</option>
-            </select>
-            <select class="w-full p-3 border rounded-lg">
-                <option>Indonesia</option>
-                <option>Malaysia</option>
-                <option>Singapura</option>
-            </select>
-            <input type="date" class="w-full p-3 border rounded-lg" />
+<section class="bg-white shadow">
+    <div class="bg-sky-800 container mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="flex items-center space-x-4">
+            <img src="/images/logo.png" alt="Logo" class="h-10">
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#" class="text-[#1e186a] hover:text-[#ff2e94]">Beranda</a></li>
+                    <li><a href="#" class="text-[#1e186a] hover:text-[#ff2e94]">Event</a></li>
+                    <li><a href="#" class="text-[#1e186a] hover:text-[#ff2e94]">Tentang Kami</a></li>
+                    <li><a href="#" class="text-[#1e186a] hover:text-[#ff2e94]">Bantuan</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="flex items-center space-x-4">
+            <a href="#" class="text-[#1e186a] hover:text-[#ff2e94]">Masuk</a>
+            <button class="bg-[#ff2e94] text-white px-4 py-2 rounded-full hover:bg-[#e0006c]">Daftar</button>
         </div>
     </div>
+</section>
 
-    <!-- Event List -->
-    <div>
-        <h2 class="text-xl font-semibold mb-4">Upcoming Events</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            @for ($i = 0; $i < 6; $i++)
-                <div class="bg-white shadow rounded-xl p-4">
-                    <div class="text-gray-500 text-sm mb-1">14 Mei 2025</div>
-                    <h3 class="font-bold text-lg mb-2">Konser Didi Kempot Orchestra</h3>
-                    <p class="text-sm text-gray-600 mb-3">Stadion GBK, Jakarta</p>
-                    <a href="#" class="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 text-sm">Lihat Detail</a>
+<!-- Search Bar -->
+<section class="bg-[#1e186a] py-6">
+    <div class="container mx-auto px-6">
+        <div class="w-full">
+            <input type="text" placeholder="Cari konser yang anda suka" class="p-3 rounded-lg w-full">
+        </div>
+    </div>
+</section>
+
+<section class="min-h-screen bg-white pt-28">
+    <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Upcoming Events</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            @for ($i = 0; $i < 20; $i++)
+                <div class="bg-white shadow-md rounded-xl overflow-hidden">
+                <img src="/images/event-poster.png" alt="Event Poster" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <div class="text-xs text-indigo-700 font-bold">APR</div>
+                    <div class="text-lg font-extrabold leading-tight -mt-1">14</div>
+                    <h3 class="text-sm font-semibold mt-2">Flow "Anime Shibari 2024 - 2025" - Tasikmalaya</h3>
                 </div>
-            @endfor
         </div>
+        @endfor
     </div>
+    </div>
+</section>
 
-    <!-- CTA -->
-    <div class="mt-12 bg-purple-100 rounded-xl p-6 flex flex-col md:flex-row justify-between items-center">
-        <div class="mb-4 md:mb-0">
-            <h2 class="text-lg font-semibold">Buat Event Kamu Sendiri!</h2>
-            <p class="text-sm text-gray-600">Langkah cepat & mudah untuk memulai event-mu</p>
+<footer class="mt-24 bg-[#0E0B57] text-white pt-12 pb-6">
+    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="text-sm leading-relaxed">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum tincidunt ante ac placerat. Nunc tincidunt tortor eu felis gravida consequat.
         </div>
-        <a href="#" class="bg-purple-600 text-white px-6 py-2 rounded hover:bg-purple-700">Buat Event</a>
+        <div>
+            <h4 class="font-bold mb-2">Rencana Events</h4>
+            <ul class="text-sm space-y-1">
+                <li>Create and Set Up</li>
+                <li>Sell Tickets</li>
+                <li>Online RSVP</li>
+                <li>Online Events</li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="font-bold mb-2">TixHub</h4>
+            <ul class="text-sm space-y-1">
+                <li>About Us</li>
+                <li>Press</li>
+                <li>Contact Us</li>
+                <li>Help Center</li>
+                <li>How it Works</li>
+                <li>Privacy</li>
+                <li>Terms</li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="font-bold mb-2">Stay In The Loop</h4>
+            <p class="text-sm mb-2">Orci varius natoque penatibus et magnis dis parturient montes, nascetur.</p>
+            <div class="flex items-center space-x-2">
+                <input type="email" placeholder="Masukkan Email" class="p-2 rounded-full text-black w-full">
+                <button class="bg-[#F72585] px-4 py-2 rounded-full text-white text-sm font-semibold">Subscribe Now</button>
+            </div>
+        </div>
     </div>
-</div>
+</footer>
 @endsection
