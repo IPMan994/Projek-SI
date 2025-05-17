@@ -2,11 +2,10 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ConcertController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', [HomeController::class, 'index'])->name('home.index');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

@@ -4,21 +4,21 @@
 
 <!-- Navigation Bar -->
 <section class="bg-white shadow">
-    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+    <div class="bg-sky-800 container mx-auto px-6 py-4 flex justify-between items-center">
         <div class="flex items-center space-x-4">
             <img src="/images/logo.png" alt="Logo" class="h-10">
             <nav>
                 <ul class="flex space-x-6">
-                    <li><a href="#" class="text-[#1e186a] hover:text-[#ff2e94]">Beranda</a></li>
-                    <li><a href="#" class="text-[#1e186a] hover:text-[#ff2e94]">Event</a></li>
-                    <li><a href="#" class="text-[#1e186a] hover:text-[#ff2e94]">Tentang Kami</a></li>
-                    <li><a href="#" class="text-[#1e186a] hover:text-[#ff2e94]">Bantuan</a></li>
+                    <li><a href="{{ route('home.index') }}" class="text-white hover:text-[#ff2e94]">Beranda</a></li>
+                    <li><a href="{{ route('concerts.index') }}" class="text-white hover:text-[#ff2e94]">Event</a></li>
+                    <li><a href="#" class="text-white hover:text-[#ff2e94]">Tentang Kami</a></li>
+                    <li><a href="#" class="text-white hover:text-[#ff2e94]">Bantuan</a></li>
                 </ul>
             </nav>
         </div>
         <div class="flex items-center space-x-4">
-            <a href="#" class="text-[#1e186a] hover:text-[#ff2e94]">Masuk</a>
-            <button class="bg-[#ff2e94] text-white px-4 py-2 rounded-full hover:bg-[#e0006c]">Daftar</button>
+            <a href="#" class="text-white hover:text-[#ff2e94]">Masuk</a>
+            <button class="text-white px-4 py-2 rounded-full hover:bg-[#e0006c]">Daftar</button>
         </div>
     </div>
 </section>
@@ -63,11 +63,16 @@
                     <span class="text-sm font-bold text-purple-800">APR 14</span>
                     <h3 class="text-md font-semibold mt-1">Flow "Anime Shibari 2024 - 2025" - Tasikmalaya</h3>
                 </div>
+                <div class="p-2 bg-blue-400">
+                    <div class="flex justify-between items-center p-2 bg-blue-400 rounded-lg">
+                        <button class="bg-sky-800 text-[#1e186a] border border-sky-800 px-4 py-2 rounded-full text-sm font-semibold">Lihat Detail Event</button>
+                    </div>
+                </div>
         </div>
         @endfor
     </div>
     <div class="text-center mt-8">
-        <a href="{{ route('concerts.index') }}"><button class="border border-[#1e186a] text-[#1e186a] py-2 px-6 rounded-full hover:bg-[#1e186a] hover:text-white transition">Lainnya</button></a>
+        <a href="{{ route('concerts.index') }}"><button class="border border-[#1e186a] text-[#1e186a] py-2 px-6 rounded-full hover:bg-[#1e186a] hover:text-sky-800 transition">Lainnya</button></a>
     </div>
     </div>
 </section>

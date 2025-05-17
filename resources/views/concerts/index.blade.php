@@ -7,16 +7,16 @@
             <img src="/images/logo.png" alt="Logo" class="h-10">
             <nav>
                 <ul class="flex space-x-6">
-                    <li><a href="#" class="text-[#1e186a] hover:text-[#ff2e94]">Beranda</a></li>
-                    <li><a href="#" class="text-[#1e186a] hover:text-[#ff2e94]">Event</a></li>
-                    <li><a href="#" class="text-[#1e186a] hover:text-[#ff2e94]">Tentang Kami</a></li>
-                    <li><a href="#" class="text-[#1e186a] hover:text-[#ff2e94]">Bantuan</a></li>
+                    <li><a href="{{ route('home.index') }}" class="text-white hover:text-[#ff2e94]">Beranda</a></li>
+                    <li><a href="{{ route('concerts.index') }}" class="text-white hover:text-[#ff2e94]">Event</a></li>
+                    <li><a href="#" class="text-white hover:text-[#ff2e94]">Tentang Kami</a></li>
+                    <li><a href="#" class="text-white hover:text-[#ff2e94]">Bantuan</a></li>
                 </ul>
             </nav>
         </div>
         <div class="flex items-center space-x-4">
-            <a href="#" class="text-[#1e186a] hover:text-[#ff2e94]">Masuk</a>
-            <button class="bg-[#ff2e94] text-white px-4 py-2 rounded-full hover:bg-[#e0006c]">Daftar</button>
+            <a href="#" class="text-white hover:text-[#ff2e94]">Masuk</a>
+            <button class="text-white px-4 py-2 rounded-full hover:bg-[#e0006c]">Daftar</button>
         </div>
     </div>
 </section>
@@ -41,6 +41,11 @@
                     <div class="text-xs text-indigo-700 font-bold">APR</div>
                     <div class="text-lg font-extrabold leading-tight -mt-1">14</div>
                     <h3 class="text-sm font-semibold mt-2">Flow "Anime Shibari 2024 - 2025" - Tasikmalaya</h3>
+                </div>
+                <div class="p-2 bg-blue-800">
+                    <div class="flex justify-between items-center p-2 bg-blue-400 rounded-lg">
+                        <button class="bg-sky-800 text-black px-4 py-2 rounded-full text-sm font-semibold">Lihat Detail Event</button>
+                    </div>
                 </div>
         </div>
         @endfor
