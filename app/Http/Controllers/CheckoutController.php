@@ -8,18 +8,22 @@ class CheckoutController extends Controller
 {
     public function showForm($ticketType, Request $request)
     {
-        $jumlah = $request->get('jumlah', 1); // default 1 tiket
-        $harga = $ticketType === 'vip' ? 2000000 : 1000000; // sesuaikan harga
-        $event = [
+        $jumlah = $request->get('jumlah', 1); // default 1
+    $harga = $ticketType === 'vip' ? 2000000 : 1000000;
+
+    return view('checkout.form', [
+        'ticketType' => $ticketType,
+        'jumlah' => $jumlah,
+        'harga' => $harga,
+        'event' => [
             'title' => 'Flow "Anime Shibari 2024 - 2025"',
             'location' => 'Ruang IDE, Tasikmalaya',
             'date' => '02 May 2025',
             'time' => '19:00 - 20:00 WIB',
-        ];
-
-        return view('checkout.form', compact('ticketType', 'jumlah', 'harga', 'event'));
+        ]
+    ]);
     }
-
+    
     public function submitForm(Request $request)
     {
         $request->validate([

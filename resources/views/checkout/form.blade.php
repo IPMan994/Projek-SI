@@ -41,7 +41,7 @@
                 </div>
 
                 <div class="flex justify-between mt-6">
-                    <a href="{{ route('tickets.select') }}" class="bg-gray-300 px-4 py-2 rounded">Kembali</a>
+                    <a href="{{ route('ticket.index') }}" class="bg-gray-300 px-4 py-2 rounded">Kembali</a>
                     <button type="submit" class="bg-purple-500 text-white px-4 py-2 rounded">Lanjut</button>
                 </div>
             </form>

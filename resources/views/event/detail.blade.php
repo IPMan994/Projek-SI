@@ -18,7 +18,7 @@
             <p class="mt-4 text-xs text-gray-500">Diselenggarakan oleh</p>
             <p class="text-sm font-medium">{{ $event['organizer'] }}</p>
 
-            <a href="{{ route('tickets.select') }}" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">Beli Tiket</a>
+            <a href="{{ route('tickets.index') }}" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">Beli Tiket</a>
         </div>
     </div>
 

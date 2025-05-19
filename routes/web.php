@@ -22,7 +22,7 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/concerts', [ConcertController::class, 'index'])->name('concerts.index');
 Route::get('/event/{slug}', [EventController::class, 'show'])->name('event.show');
-Route::get('/tickets/select', [TicketController::class, 'select'])->name('tickets.select');
+Route::get('/tickets/select', [TicketController::class, 'select'])->name('tickets.index');
 Route::post('/tickets/checkout', [TicketController::class, 'checkout'])->name('tickets.checkout');
 Route::get('/tickets/confirmation', [TicketController::class, 'confirmation'])->name('tickets.confirmation');
 Route::get('/checkout/{ticketType}', [CheckoutController::class, 'showForm'])->name('checkout.form');

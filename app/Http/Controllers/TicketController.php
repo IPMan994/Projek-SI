@@ -8,7 +8,7 @@ class TicketController extends Controller
 {
     public function select()
     {
-        return view('tickets.select');
+        return view('tickets.index');
     }
 
     // Proses checkout (sementara redirect ke halaman konfirmasi)
