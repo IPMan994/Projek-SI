@@ -65,7 +65,7 @@
                 </div>
                 <div class="p-2 bg-blue-400">
                     <div class="flex justify-between items-center p-2 bg-blue-400 rounded-lg">
-                        <button class="bg-sky-800 text-[#1e186a] border border-sky-800 px-4 py-2 rounded-full text-sm font-semibold">Lihat Detail Event</button>
+                        <a href="{{ route('event.show', 'anime-shibari-2025') }}"><button class="bg-sky-800 text-[#1e186a] border border-sky-800 px-4 py-2 rounded-full text-sm font-semibold">Lihat Detail Event</button></a>
                     </div>
                 </div>
         </div>

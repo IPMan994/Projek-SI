@@ -44,7 +44,7 @@
                 </div>
                 <div class="p-2 bg-blue-800">
                     <div class="flex justify-between items-center p-2 bg-blue-400 rounded-lg">
-                        <button class="bg-sky-800 text-black px-4 py-2 rounded-full text-sm font-semibold">Lihat Detail Event</button>
+                        <a href="{{ route('event.show', 'anime-shibari-2025') }}"><button class="bg-sky-800 text-black px-4 py-2 rounded-full text-sm font-semibold">Lihat Detail Event</button></a>
                     </div>
                 </div>
         </div>

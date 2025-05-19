@@ -3,38 +3,31 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Ticket;
-use App\Models\Concert;
 
 class TicketController extends Controller
 {
-    public function index() 
+    public function select()
     {
-        return view('tickets.index');
+        return view('tickets.select');
     }
 
-    public function create() {
-        $concerts = Concert::all();
-        return view('tickets.create', compact('concerts'));
+    // Proses checkout (sementara redirect ke halaman konfirmasi)
+    public function checkout(Request $request)
+    {
+        $vip = $request->input('vip_quantity');
+        $festival = $request->input('festival_quantity');
+
+        // Lakukan validasi, simpan data pesanan, dll
+
+        return redirect()->route('tickets.confirmation')->with([
+            'vip' => $vip,
+            'festival' => $festival,
+        ]);
     }
 
-    public function store(Request $request) {
-        Ticket::create($request->all());
-        return redirect()->route('tickets.index');
-    }
-
-    public function edit(Ticket $ticket) {
-        $concerts = Concert::all();
-        return view('tickets.edit', compact('ticket', 'concerts'));
-    }
-
-    public function update(Request $request, Ticket $ticket) {
-        $ticket->update($request->all());
-        return redirect()->route('tickets.index');
-    }
-
-    public function destroy(Ticket $ticket) {
-        $ticket->delete();
-        return redirect()->route('tickets.index');
+    // Konfirmasi setelah pemesanan
+    public function confirmation()
+    {
+        return view('tickets.confirmation');
     }
 }
